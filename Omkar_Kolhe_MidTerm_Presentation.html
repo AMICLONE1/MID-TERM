@@ -40,8 +40,8 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;over
 .noise,.grid-bg,.glow-orb,.hero-orb{pointer-events:none}
 /* Content-heavy slides: top-align so images don't get cut */
 #s3,#s4,#s6{justify-content:flex-start;padding-top:90px}
-@media(max-width:900px){.slide{padding:80px 24px 40px}
-#s3,#s4,#s6{padding-top:80px}}
+@media(max-width:900px){.slide{padding:70px 24px 40px}
+#s3,#s4,#s6{padding-top:70px}}
 
 /* ===== FIXED UI ===== */
 .top-bar{
@@ -418,6 +418,132 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;over
   font-size:13px;font-weight:600;color:var(--orange);
 }
 .startup-badge .sb-icon{font-size:15px}
+
+/* ===== RESPONSIVE: TABLET (max-width: 900px) ===== */
+@media(max-width:900px){
+  .slide{padding:70px 24px 40px}
+  #s3,#s4,#s6{padding-top:70px}
+  .sec-title{font-size:clamp(1.6rem,3.5vw,2.8rem)}
+  .hero-name{font-size:clamp(2.4rem,6vw,4rem)}
+  .hero-details{gap:20px}
+  .lec-stats{gap:28px}
+  .lec-stat .num{font-size:2.5rem}
+  .snap-big{font-size:2.4rem}
+  .rd-split{gap:16px}
+  .rd-box{padding:26px}
+  .exp-card{padding:24px}
+  .future-card{padding:22px 20px}
+  .side-nav{right:12px;gap:10px}
+  .side-dot{width:6px;height:6px}
+  .top-bar{padding:12px 18px}
+  .top-logo{font-size:11px;letter-spacing:2px}
+  .top-name{font-size:11px}
+}
+
+/* ===== RESPONSIVE: MOBILE (max-width: 600px) ===== */
+@media(max-width:600px){
+  html{scroll-snap-type:none}
+  .slide{padding:64px 16px 32px;min-height:auto}
+  #s3,#s4,#s6{padding-top:64px}
+
+  /* Top bar */
+  .top-bar{padding:10px 14px;flex-wrap:wrap;gap:4px}
+  .top-logo{font-size:10px;letter-spacing:1.5px}
+  .top-name{font-size:10px;width:100%;text-align:center}
+
+  /* Side nav: hide on mobile, use scroll instead */
+  .side-nav{display:none}
+  .slide-num{font-size:10px;left:16px;bottom:16px}
+
+  /* Hero */
+  .hero-name{font-size:clamp(2rem,9vw,3rem);margin-bottom:8px}
+  .hero-role{font-size:0.95rem;margin-bottom:20px}
+  .hero-tag{font-size:10px;padding:5px 12px;margin-bottom:20px}
+  .hero-chips{gap:8px}
+  .hero-chip{padding:6px 12px;font-size:12px}
+  .startup-badge{font-size:12px;padding:5px 12px}
+  .hero-details{gap:14px;margin-top:24px}
+  .hero-detail .val{font-size:13px}
+
+  /* Section titles */
+  .sec-title{font-size:clamp(1.4rem,6vw,2rem);margin-bottom:8px}
+  .sec-desc{font-size:13px;margin-bottom:24px}
+  .tag-line{font-size:10px;letter-spacing:3px}
+
+  /* Snap grid */
+  .snap-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .snap-big{font-size:2rem}
+  .snap-label{font-size:11px}
+  .snap-card{padding:20px 14px;border-radius:12px}
+
+  /* Experiment cards */
+  .exp-row{grid-template-columns:1fr;gap:14px}
+  .exp-card{padding:20px;border-radius:12px}
+  .exp-card h3{font-size:1.05rem}
+  .exp-card p{font-size:12.5px}
+  .exp-badge{font-size:22px;top:14px;right:14px}
+  .exp-card img,.exp-card video{max-height:180px}
+
+  /* R&D cards */
+  .rd-split{grid-template-columns:1fr;gap:14px}
+  .rd-box{padding:22px;border-radius:14px}
+  .rd-box h3{font-size:1.15rem}
+  .rd-icon{width:44px;height:44px;font-size:22px;margin-bottom:14px}
+  .rd-feat{font-size:12px}
+  .rd-box video,.rd-box img{max-height:180px}
+
+  /* Lectures */
+  .lec-stats{gap:20px;margin-bottom:24px}
+  .lec-stat .num{font-size:2rem}
+  .lec-stat .lbl{font-size:9px}
+  .audience-row{flex-direction:column;gap:8px}
+  .aud-chip{font-size:12px;padding:8px 14px}
+  .topic-list{gap:5px}
+  .topic-item{font-size:12px;padding:8px 12px}
+
+  /* Kits */
+  .kits-flex{grid-template-columns:repeat(2,1fr);gap:10px}
+  .kit-card{padding:18px 12px;border-radius:12px}
+  .kit-emoji{font-size:28px}
+  .kit-nm{font-size:13px}
+  .kit-desc{font-size:10px}
+
+  /* Projects */
+  .proj-container{max-height:55vh}
+  .proj-row{padding:9px 12px;font-size:12px;gap:10px;flex-wrap:wrap}
+  .proj-domain{margin-left:0;margin-top:4px;font-size:8px}
+
+  /* Future */
+  .future-grid{grid-template-columns:1fr;gap:14px}
+  .future-card{padding:20px 18px;border-radius:12px}
+  .future-card h3{font-size:1rem}
+  .future-card p{font-size:12px}
+  .future-card .fc-icon{width:42px;height:42px;font-size:22px;margin-bottom:12px}
+  .ft-phase{min-width:120px;padding:14px 16px}
+  .future-timeline{gap:10px}
+
+  /* Final slide */
+  .final-big{font-size:clamp(2rem,8vw,3.5rem)}
+  .final-sub{font-size:13px;margin-bottom:24px}
+  .final-center .snap-grid{grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:24px!important}
+  .contact-row{flex-direction:column;gap:10px;align-items:center}
+  .contact-pill{font-size:12px;padding:8px 16px}
+}
+
+/* ===== RESPONSIVE: VERY SMALL (max-width: 400px) ===== */
+@media(max-width:400px){
+  .slide{padding:60px 12px 24px}
+  .hero-name{font-size:clamp(1.6rem,8vw,2.4rem)}
+  .hero-chips{flex-direction:column}
+  .hero-chip{justify-content:center}
+  .startup-badge{justify-content:center}
+  .snap-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .snap-big{font-size:1.7rem}
+  .kits-flex{grid-template-columns:1fr 1fr;gap:8px}
+  .hero-details{flex-direction:column;gap:10px}
+  .proj-row{font-size:11px}
+  .sec-title{font-size:clamp(1.2rem,5.5vw,1.6rem)}
+}
 
 @media print{
   .top-bar,.side-nav,.slide-num,.progress{display:none}
