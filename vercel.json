@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Omkar_Kolhe_MidTerm_Presentation.html"
+    }
+  ]
+}
